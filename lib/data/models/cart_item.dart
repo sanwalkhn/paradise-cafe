@@ -1,0 +1,16 @@
+class CartItem {
+  final String name;
+  final int price;
+  final String image;
+  int quantity;
+
+  CartItem({
+    required this.name,
+    required this.price,
+    required this.image,
+    this.quantity = 1,
+  });
+
+  // ── Computed total for this line item ────────────
+  int get totalPrice => price * quantity;
+}
